@@ -10,6 +10,8 @@ Google collab notebook: https://colab.research.google.com/drive/1-u0u6Ib5aPGprUh
 
 Google Doc: https://docs.google.com/document/d/11qWyrXuxJnu6uy4XAkVvms7h0RefiqxWdsWIJ5lPy3w/edit
 
+Google codelab: https://codelabs-preview.appspot.com/?file_id=1Ih2p01AQZP2_p7pM-CWIECQJQams-EnPEwdwYNav838#0
+
 ## Project Team Members:
 
 1) Dhawal Negi
