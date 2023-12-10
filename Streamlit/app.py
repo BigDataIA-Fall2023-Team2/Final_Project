@@ -228,44 +228,6 @@ def landing_page():
         sorted_boston_news = fetch_and_sort_news(search_query)
         display_news_in_columns(sorted_boston_news)
 
-
-
-
-
-            # st.write(f"Processing input: {search_query}")
-            # google_news = GNews()
-            # google_news.period = '1d'
-            # boston_news = google_news.get_news(search_query)
-            # sorted_boston_news = sorted(boston_news, key=lambda x: x['published date'], reverse=True)
-        
-            # # Display details for the first 5 results in tile format
-            # for i, result in enumerate(sorted_boston_news[:5]):
-            #     scraped_data = scrape_url(result['url'])
-            #     st.session_state.summary = get_questions(scraped_data['content'])
-            #     if scraped_data['title'] != "Title not available." and scraped_data['title'] != " Access to this page has been denied" and scraped_data['content'] and st.session_state.summary != "The given text does not provide any useful information. It appears to be HTML tags related to website design.":
-            #         # Display details in tiles
-            #         st.subheader(f"Result {i + 1}")
-                
-            #         col1, col2 = st.columns(2)
-        
-            #         with col1:
-            #             st.write(f"**Title:** {result['title']}")
-            #             st.write(f"**Description:** {result['description']}")
-            #             st.write(f"**Published Date:** {result['published date']}")
-            #             st.write(f"**Publisher:** {result['publisher']['title']}")
-            #             st.write(f"**URL:** {result['url']}")
-                
-            #         with col2:
-            #             # Scrape the content of the URL
-            #             # st.subheader("Scraped Content")
-            #             # st.write(f"**Title:** {scraped_data['title']}")
-            #             # st.write(f"**Content:** {scraped_data['content']}")
-        
-            #             # Call get_questions function
-            #             #summary = get_questions(scraped_data['content'])
-            #             st.subheader("GPT Summarized")
-            #             st.write(f"**Summary:** {st.session_state.summary}")
-
     user_preferences = fetch_user_preferences(st.session_state.user)
 
     # Fetch and display top news for each user preference
