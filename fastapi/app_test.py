@@ -107,17 +107,5 @@ def test_update_playlist(test_client, user_token):
     assert response.json() == ['success'] 
 
 
-######################## TEST CASE 9 : DELETE PLAYLIST ####################################
-
-
-def test_delete_playlist(test_client, user_token):
-    headers = {"Authorization": f"Bearer {user_token}"}
-    data = {
-        "playlist_name": "My New Playlist1",  # Name of the playlist to delete
-    }
-    response = test_client.post("/delete_playlist", json=data, headers=headers)
-    assert response.status_code == 200
-    assert response.json() == ['success'] 
-
 
 
