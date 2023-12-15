@@ -21,6 +21,8 @@ Python | Streamlit | OPENAI | Azure SQL | Pinecone | Docker | Google Cloud | Fas
 
 ### Architecture diagram ###
 
+![image](images/Newsphere_Data_Architecture.png)
+
 
 ### Project Flow
 
@@ -31,6 +33,7 @@ The user login implementation using the concept of JWT. Apart from that, there i
 
 ### Repository Structure
 
+![image](images/Repo_structure.png)
 
 ### Contributions
 
