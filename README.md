@@ -8,7 +8,7 @@ The project is a news application that allows user to read and add latest news i
 
 Google collab notebook: https://colab.research.google.com/drive/1-u0u6Ib5aPGprUhVwmp_Yj_Ie-FEaNgi?usp=sharing
 
-Google codelab: https://codelabs-preview.appspot.com/?file_id=1Ih2p01AQZP2_p7pM-CWIECQJQams-EnPEwdwYNav838#0
+Google codelab: [https://codelabs-preview.appspot.com/?file_id=1Ih2p01AQZP2_p7pM-CWIECQJQams-EnPEwdwYNav838#0](https://codelabs-preview.appspot.com/?file_id=1tJ3JqcmwDDNBPkk97BcidnZiWHzzjm5QJaESpIeejAw#0)
 
 App link: http://34.118.251.190:8501/
 
