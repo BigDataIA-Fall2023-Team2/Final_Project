@@ -1,6 +1,8 @@
 import pytest
 from fastapi.testclient import TestClient
 from app import app
+from datetime import datetime
+
 
 @pytest.fixture(scope="module")
 def test_client():
@@ -20,7 +22,7 @@ def user_token(test_client):
 #################### TEST CASE 1: Succesful Registration ###################
 def test_register_user(test_client):
     data = {
-        "username": "chavan",
+        "username": "chavan"+str(datetime.now()),
         "email": "chavan@example.com",
         "password": "chavan",
         "preferred_categories": ["America"]
@@ -62,7 +64,7 @@ def test_create_playlist(test_client, user_token):
     headers = {"Authorization": f"Bearer {user_token}"}
     data = {
         "playlist_name": "My New Playlist",
-        "news_id_list": [3403, 3404]  # Replace with actual news IDs
+        "news_id_list": ["3403", "3404"]  # Replace with actual news IDs
     }
     response = test_client.post("/create_playlist", json=data, headers=headers)
     assert response.status_code == 200

@@ -152,3 +152,8 @@ typing_extensions==4.8.0
 urllib3==2.0.7
 uvicorn==0.23.2
 yarl==1.9.2
+pytest==7.4.3
+pytest-cov==4.0.0
+ruff==v0.0.260
+coverage-badge~=1.1.0
+httpx==0.25.2
