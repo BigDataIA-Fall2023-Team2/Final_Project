@@ -1,8 +1,10 @@
 # Final_Project
 
-### AI-Enhanced NewsFlow: A Personalized News Digest Platform
+### AI-Enhanced Newsphere: A Personalized News Digest Platform
 
-The project is a news application that allows user to read and add latest news into their playlist. It also allows users to listen to the news. The project gets data from google news, bbc, nytimes etc and displays it to user based on preferences. The user can listen them by adding it to queue if the user doesnt want to store in database. The user can also add the articles to playlist to access them later. All our news articles are summarized to save users time.
+Introducing a news application project that lets you stay informed and organized effortlessly. 
+
+With this app, you can read the latest news and even add your favorites to a personalized playlist. Enjoy the option to listen to the news directly, sourced from reputable outlets like Google News, BBC, NY Times, and more, all tailored to your preferences. If you prefer not to store articles permanently, simply queue them up for a quick listen. Additionally, you have the flexibility to add articles to a playlist for easy access later. We've made sure to summarize all news articles, saving you valuable time. Stay updated and organized with our user-friendly news app!
 
 ## Project Resources
 
@@ -17,7 +19,7 @@ Airflow: http://34.118.251.190:8080/home
 FAST API: http://34.118.251.190:8000/docs
 
 ### Tech Stack
-Python | Streamlit | OPENAI | Azure SQL | Pinecone | Docker | Google Cloud | Fast API | Airflow
+Python | Streamlit | OpenAI | Azure SQL | Pinecone | Docker | Google Cloud | Fast API | Airflow
 
 ### Architecture diagram ###
 
@@ -26,9 +28,11 @@ Python | Streamlit | OPENAI | Azure SQL | Pinecone | Docker | Google Cloud | Fas
 
 ### Project Flow
 
-The user first registers in our application. The user will then give preferences on what sections are found interesting such as America, Business, Enviornment etc. After registration, the user logs in and the user will be able to see top 5 news in his selected section. The user can read the article or listen to them by playing it. Apart from that, the user can add the prefered articles into a queue so that all of them are played one after the other. The queue will not be saved to database. The user can create a new playlist where the user can add the required articles into the playlist for acessing it later as playlists are stored in database. Accordingly, the user can modify or delete playlists.
+1) Start by registering in our application to personalize your news experience. Specify your interests in sections like America, Business, Environment, and more during the registration process. Once registered, log in to discover the top 5 news articles in your selected section. Read them at your pace or listen to them with the play option.
 
-The user login implementation using the concept of JWT. Apart from that, there is an Airflow written that is scheduled to run every 3 minutes and will store all the articles into the database. 'Add only new/changed articles' feature has beeen added into the airflow.
+2) For added convenience, create a queue for preferred articles. These queued articles will play consecutively but won't be stored in the database. Alternatively, organize your favorite articles by creating playlists, which are saved in the database for easy access later. Manage your playlists by modifying or deleting them as needed.
+
+3) Our user login operates through JWT for secure access. Additionally, we've implemented an Airflow system scheduled to run every 8 minutes. This system stores all articles in the database, incorporating a feature that adds only new or changed articles. Stay seamlessly connected to the latest news with our user-friendly and efficient features.
 
 
 ### Repository Structure
