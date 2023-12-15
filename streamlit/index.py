@@ -75,6 +75,11 @@ def landing_page():
         st.rerun()
     st.title('Welcome to NewsSpear')
 
+    if 'text_search_query' not in st.session_state:
+        st.session_state['text_search_query'] = None
+    if 'audio_search_query' not in st.session_state:
+        st.session_state['audio_search_query'] = None
+    
     c1, c2, c3 = st.columns([2, 1,0.5])
     
     st.session_state['search_query'] = None 
@@ -97,8 +102,6 @@ def landing_page():
         get_news = st.button("Get News")
 
     if get_news:
-        st.write(st.session_state['text_search_query'])
-        st.write(st.session_state['audio_search_query'])
         if 'text_search_query' in st.session_state and st.session_state.text_search_query is not None:
             st.session_state['search_query'] = st.session_state['text_search_query']
         elif 'audio_search_query' in st.session_state and st.session_state.audio_search_query is not None:
