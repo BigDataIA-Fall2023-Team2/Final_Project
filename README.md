@@ -1,6 +1,6 @@
 # Final_Project
 
-### AI-Enhanced Newsphere: A Personalized News Digest Platform
+### AI-Enhanced NewsSphere: A Personalized News Digest Platform
 
 Introducing a news application project that lets you stay informed and organized effortlessly. 
 
@@ -19,6 +19,8 @@ App link (hosted on Streamlit Cloud): https://bigdatateam2-finalproject.streamli
 Airflow: http://34.118.251.190:8080/home
 
 FAST API: http://34.118.251.190:8000/docs
+
+Youtube Video URL: https://www.youtube.com/watch?v=hqx6lcAuugc
 
 ### Tech Stack
 Python | Streamlit | OpenAI | Azure SQL | Pinecone | Docker | Google Cloud | Fast API | Airflow
