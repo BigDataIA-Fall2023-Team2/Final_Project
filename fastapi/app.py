@@ -123,8 +123,8 @@ async def get_categories():
     
 @app.get("/gnews_search", status_code=status.HTTP_200_OK)
 async def get_gnews(query : str):
-    google_news = GNews( max_results=5)
-    google_news.period = '1d'
+    google_news = GNews(max_results=5)
+    google_news.period = '10d'
     search_result = google_news.get_news(query)
     for i in range(0,5):
         article = google_news.get_full_article(search_result[i]['url'])
