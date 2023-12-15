@@ -12,6 +12,10 @@ Google Doc: https://docs.google.com/document/d/11qWyrXuxJnu6uy4XAkVvms7h0RefiqxW
 
 Google codelab: https://codelabs-preview.appspot.com/?file_id=1Ih2p01AQZP2_p7pM-CWIECQJQams-EnPEwdwYNav838#0
 
+App link: http://34.118.251.190:8501/
+
+Airflow: http://34.118.251.190:8080/home
+
 ### Tech Stack
 Python | Streamlit | OPENAI | Azure SQL | Pinecone | Docker | Google Cloud | Fast API | Airflow
 
