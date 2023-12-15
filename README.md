@@ -8,13 +8,13 @@ The project is a news application that allows user to read and add latest news i
 
 Google collab notebook: https://colab.research.google.com/drive/1-u0u6Ib5aPGprUhVwmp_Yj_Ie-FEaNgi?usp=sharing
 
-Google Doc: https://docs.google.com/document/d/11qWyrXuxJnu6uy4XAkVvms7h0RefiqxWdsWIJ5lPy3w/edit
-
 Google codelab: https://codelabs-preview.appspot.com/?file_id=1Ih2p01AQZP2_p7pM-CWIECQJQams-EnPEwdwYNav838#0
 
 App link: http://34.118.251.190:8501/
 
 Airflow: http://34.118.251.190:8080/home
+
+FAST API: http://34.118.251.190:8000/docs
 
 ### Tech Stack
 Python | Streamlit | OPENAI | Azure SQL | Pinecone | Docker | Google Cloud | Fast API | Airflow
@@ -34,11 +34,11 @@ The user login implementation using the concept of JWT. Apart from that, there i
 
 ### Contributions
 
-| Name                            | Contribution                                                                 |  
-| ------------------------------- | -----------------------------------------------------------------------------|
-| Shardul Chavan                  | Snowflake, Langchain and Streamlit integration                               | 
-| Chinmay Gandi                   | Snowflake - SQL process, UDF Function                                        | 
-| Dhawal Negi                     | Snowflake - SQL process, UDF Function, Stored Procedure                      |                                                  
+| Name                            | Contribution                                                                            |  
+| ------------------------------- | ----------------------------------------------------------------------------------------|
+| Shardul Chavan                  | Text to speech Integration, Streamlit layout, Speech to Text Integration, Playlists     | 
+| Chinmay Gandi                   | Airflow, Pinecone Integration, Playlists , Azure Data Storage                           | 
+| Dhawal Negi                     | JWT, Dockerization, GCP Deployment, FAST API                                            |                                                  
 
 ### Additional Notes
 WE ATTEST THAT WE HAVEN’T USED ANY OTHER STUDENTS’ WORK IN OUR ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK. 
