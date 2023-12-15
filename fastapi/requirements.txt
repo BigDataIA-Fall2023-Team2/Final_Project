@@ -1,4 +1,3 @@
-[18:57] Dhawal Negi
 pinecone-client
 gnews
 newspaper3k
