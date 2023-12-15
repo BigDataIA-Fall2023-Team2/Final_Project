@@ -12,7 +12,9 @@ Google collab notebook: https://colab.research.google.com/drive/1-u0u6Ib5aPGprUh
 
 Google codelab: [https://codelabs-preview.appspot.com/?file_id=1Ih2p01AQZP2_p7pM-CWIECQJQams-EnPEwdwYNav838#0](https://codelabs-preview.appspot.com/?file_id=1tJ3JqcmwDDNBPkk97BcidnZiWHzzjm5QJaESpIeejAw#0)
 
-App link: http://34.118.251.190:8501/
+App link (hosted on Google Cloud): http://34.118.251.190:8501/
+
+App link (hosted on Streamlit Cloud): https://bigdatateam2-finalproject.streamlit.app/
 
 Airflow: http://34.118.251.190:8080/home
 
