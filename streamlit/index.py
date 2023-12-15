@@ -79,13 +79,16 @@ def landing_page():
     
     st.session_state['search_query'] = None 
     with c1:
-        st.session_state['text_search_query'] = st.text_input("Whats on your mind!!",value=st.session_state.search_query)
+        text_search_query = st.text_input("Whats on your mind!!",value=st.session_state.search_query)
+        if text_search_query is not None:
+            st.session_state['text_search_query'] = text_search_query
 
     with c2:
         st.write("\n")
         st.write("\n")
-        st.session_state['audio_search_query'] = speech_to_text(language='en', use_container_width=True, just_once=True, key='STT')
-        if st.session_state['audio_search_query'] is not None:
+        audio_search_query = speech_to_text(language='en', use_container_width=True, just_once=True, key='STT')
+        if audio_search_query is not None:
+            st.session_state['audio_search_query'] = audio_search_query
             st.write("Did you mean this: ", st.session_state['audio_search_query'])
 
     with c3:
@@ -94,6 +97,8 @@ def landing_page():
         get_news = st.button("Get News")
 
     if get_news:
+        st.write(st.session_state['text_search_query'])
+        st.write(st.session_state['audio_search_query'])
         if 'text_search_query' in st.session_state and st.session_state.text_search_query is not None:
             st.session_state['search_query'] = st.session_state['text_search_query']
         elif 'audio_search_query' in st.session_state and st.session_state.audio_search_query is not None:
