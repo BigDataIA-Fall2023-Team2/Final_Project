@@ -141,18 +141,19 @@ def fetch_and_insert_data(**kwargs):
             item['published_datetime'] = extract_date_time(item['published'])
             
             if not record_exists(item['title'], item['summary']):
-                if item['summary'] != '' and item['summary'] and item['link'] and item['link'] and item['published'] :
-                    all_news_items.append(item)
-                    with pymssql.connect(server, username, password, database) as conn:
-                        with conn.cursor(as_dict=True) as cursor:
-                            cursor.execute(
-                                "INSERT INTO all_news (title, link, published, summary, source, category, published_datetime, image_link) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
-                                (item['title'], item['link'], item['published'], item['summary'], item['source'], item['category'], item['published_datetime'], item['image_url'])
-                            )
-                        conn.commit()
-                    print(f"Record added {item['title']}")
-                else:
-                    print(f"Record does not exits but summary is blank {item['title']}")    
+                if item['summary'] != '' and item['image_url'] != '' and item['title'] != '' and item['published'] != '' and item['link'] != '':
+                    if item['summary'] and item['image_url'] and item['title'] and item['published'] and item['link']:
+                        all_news_items.append(item)
+                        with pymssql.connect(server, username, password, database) as conn:
+                            with conn.cursor(as_dict=True) as cursor:
+                                cursor.execute(
+                                    "INSERT INTO all_news (title, link, published, summary, source, category, published_datetime, image_link) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
+                                    (item['title'], item['link'], item['published'], item['summary'], item['source'], item['category'], item['published_datetime'], item['image_url'])
+                                )
+                            conn.commit()
+                        print(f"Record added {item['title']}")
+                    else:
+                        print(f"Record does not exits but details are blank {item['title']}")    
             else:
                 print(f"Record already exits {item['title']}")
     news_df = pd.DataFrame(all_news_items)
@@ -191,7 +192,7 @@ dag = DAG(
     'rss_to_sql_dag',
     default_args=default_args,
     description='Fetch news from RSS feeds and insert into Azure SQL table',
-    schedule_interval=None,  
+    schedule_interval='*/15 * * * *',
     catchup=False,
 )
 
