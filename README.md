@@ -1,4 +1,4 @@
-# Final_Project
+# NewsSphere
 
 ### AI-Enhanced NewsSphere: A Personalized News Digest Platform
 
