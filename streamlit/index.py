@@ -66,7 +66,8 @@ def register_page():
         else:
             st.error("Something went wrong!!!")
           
-
+if 'search_query' not in st.session_state:
+    st.session_state.search_query = ""
 def landing_page():
 
     st.set_page_config(layout="wide")
@@ -77,16 +78,18 @@ def landing_page():
 
     c1, c2, c3 = st.columns([2, 1,0.5])
     
-    st.session_state['search_query'] = None 
+    # st.session_state['search_query'] = None 
     with c1:
-        st.session_state['text_search_query'] = st.text_input("Whats on your mind!!",value=st.session_state.search_query)
+        search_query = st.text_input("Whats on your mind!!",value=st.session_state.search_query)
 
     with c2:
         st.write("\n")
         st.write("\n")
-        st.session_state['audio_search_query'] = speech_to_text(language='en', use_container_width=True, just_once=True, key='STT')
-        if st.session_state['audio_search_query'] is not None:
-            st.write("Did you mean this: ", st.session_state['audio_search_query'])
+        text = speech_to_text(language='en', use_container_width=True, just_once=True, key='STT')
+        if text:
+            st.session_state.search_query = text
+            if st.session_state.search_query:
+                st.write("Did you mean this: ", st.session_state.search_query)
 
     with c3:
         st.write("\n")
@@ -94,12 +97,9 @@ def landing_page():
         get_news = st.button("Get News")
 
     if get_news:
-        if 'text_search_query' in st.session_state and st.session_state.text_search_query is not None:
-            st.session_state['search_query'] = st.session_state['text_search_query']
-        elif 'audio_search_query' in st.session_state and st.session_state.audio_search_query is not None:
-            st.session_state['search_query'] = st.session_state['audio_search_query']
-        else:
+        if st.session_state.search_query== "":
             st.error("Please Enter the search query!!")
+        else:
         auth_token =  "Bearer "+ st.session_state['token']
         headers = {
             "accept": "application/json",
