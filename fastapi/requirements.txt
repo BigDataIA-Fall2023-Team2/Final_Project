@@ -6,7 +6,7 @@ fastapi
 pydantic
 python-dotenv
 pathlib
-jwt
+pyjwt
 openai
 pymssql
 uvicorn
